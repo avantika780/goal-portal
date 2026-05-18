@@ -1,16 +1,54 @@
-# React + Vite
+# Goal Setting & Tracking Portal
+### AtomQuest Hackathon 1.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based Goal Setting & Tracking Portal that supports the full lifecycle of employee goals — from creation and alignment to quarterly check-ins and performance visibility.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Demo Credentials
 
-## React Compiler
+| Role     | Email               | Password |
+|----------|---------------------|----------|
+| Employee | employee@test.com   | 1234     |
+| Manager  | manager@test.com    | 1234     |
+| Admin    | admin@test.com      | 1234     |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Employee goal creation with validations (max 8 goals, min 10% weightage, total must equal 100%)
+- Manager approval / rejection workflow
+- Quarterly achievement check-ins (Q1, Q2, Q3, Q4)
+- Score computation based on UoM type (Numeric, %, Zero-based)
+- Admin dashboard with overview, audit log, and CSV export
+- Role-based protected routes
+
+---
+
+## Tech Stack
+
+- React (Vite)
+- Tailwind CSS (CDN)
+- React Router DOM
+- React Hot Toast
+- localStorage (no backend needed)
+
+---
+
+## How to Run Locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open http://localhost:5173 in your browser.
+
+---
+
+## Architecture
+
+- Frontend: React + Tailwind CSS
+- Data Storage: Browser localStorage
+- Hosting: Vercel
